@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    font-family: 'Courier New', Courier, monospace;
+    background: url(../img/elon-musk.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#main
+{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+      '. header'
+      '. content'
+      '. footer';
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 10% 85% 5%;
+}
+
+
+#title
+{
+    grid-area: header;
+    padding: 1em;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 27px;
+}
+
+#image
+{
+    width: 40vw;
+}
+
+#tribute-info
+{
+    position: block;
+    grid-area: content;
+    color: whitesmoke;
+    
+}
+
+#tribute-link
+{
+    grid-area: footer;
+
+}
+
+#tribute-link a
+{
+    color: white;
+    text-decoration: none;
+    padding: 0 0 0 2.2em;
+    font-size: 12px;
+}
+
+#tribute-link a:hover
+{
+    transform: scale(1.5);
+    transition: font-size 1s;
+}
+
+
+.text-bottom
+{
+    position: absolute;
+    bottom: 40px;
+    font-size: 12px;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 2.2em;
+}
+
+.social_icon
+{
+    width: 35px;
+    height: auto;
+    animation-name: social_icons_shake;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: rotate(0deg);
+    padding: 2em 0 2em 0 ;
+}
+
+.social_icon:hover
+{
+    animation-name: social_icons_an;
+    animation-fill-mode: forwards;
+    animation-duration: 450ms;
+}
+
+#social_media
+{
+    align-content: center;
+}
+
+@keyframes social_icons_an{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.25);
+    }
+}
+
+
+
+@keyframes social_icons_shake{
+    0%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    55%{
+        transform: rotate(-10deg);
+    }
+    60%{
+        transform: rotate(10deg);
+    }
+    65%{
+        transform: rotate(-10deg);
+    }
+    70%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    80%{
+        transform: rotate(10deg);
+    }
+    85%{
+        transform: rotate(-10deg);
+    }
+    90%{
+        transform: rotate(10deg);
+    }
+    95%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+
+
+}
